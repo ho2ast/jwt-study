@@ -20,7 +20,6 @@ public class MyFilter1 implements Filter {
             String authType = req.getAuthType();
             String header = req.getHeader("Authorization");
             System.out.println("header = " + header);
-            System.out.println("authType = " + authType);
 
             if (header.equals("Bearer cos")) {
                 filterChain.doFilter(servletRequest, servletResponse);
